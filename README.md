@@ -1,0 +1,2 @@
+# RepositoryPatternTemplate
+Repository Pattern Template
