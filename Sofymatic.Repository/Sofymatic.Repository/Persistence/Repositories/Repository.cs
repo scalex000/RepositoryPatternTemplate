@@ -10,12 +10,12 @@ namespace Sofymatic.Repository.Persistence.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private readonly DbContext _context;
+        protected readonly DbContext Context;
         private DbSet<TEntity> _entities;
 
         public Repository(DbContext context)
         {
-            _context = context;
+            Context = context;
             _entities = context.Set<TEntity>();
         }
 
