@@ -17,12 +17,11 @@ namespace Sofymatic.Repository.Core.Repositories
         IEnumerable<TEntity> GetAll();
         TEntity Get(int id);
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
-        TEntity SingleOrDefault(Expression<Func<TEntity, bool>> precicate);
+        TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
         void Add(TEntity entity);
         void AddRange(TEntity entities);
-        IEnumerable<TEntity> All(Expression<Func<TEntity, bool>> predicate);
-        void Remove(TEntity Entity);
+        void Remove(TEntity entity);
         void RemoveRange(TEntity entities);
-        TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predictate);
+        TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate);
     }
 }
