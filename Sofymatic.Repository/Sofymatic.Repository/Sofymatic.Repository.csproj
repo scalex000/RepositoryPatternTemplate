@@ -6,8 +6,10 @@
 
   <ItemGroup>
     <Folder Include="Core\Domain\" />
-    <Folder Include="Core\Repositories\" />
-    <Folder Include="Persistence\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
   </ItemGroup>
 
 </Project>
