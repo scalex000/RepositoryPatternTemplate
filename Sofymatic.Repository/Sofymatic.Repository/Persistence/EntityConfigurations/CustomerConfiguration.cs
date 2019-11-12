@@ -11,6 +11,7 @@ namespace Sofymatic.Repository.Persistence.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
+            
             builder.Property(c => c.CustomerId)
                 .IsRequired();
             builder.Property(c => c.Name)

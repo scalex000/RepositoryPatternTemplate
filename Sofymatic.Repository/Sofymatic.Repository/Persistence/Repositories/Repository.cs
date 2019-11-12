@@ -51,7 +51,7 @@ namespace Sofymatic.Repository.Persistence.Repositories
 
         public void Remove(TEntity entity)
         {
-            _entities.Remove(entity)
+            _entities.Remove(entity);
         }
 
         public void RemoveRange(TEntity entities)
@@ -61,7 +61,7 @@ namespace Sofymatic.Repository.Persistence.Repositories
 
         public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
-            return _entities.SingleOrDefault(predicate)
+            return _entities.SingleOrDefault(predicate);
         }
     }
 }

@@ -12,13 +12,22 @@ namespace Sofymatic.Repository.Persistence
     {
         public SofymaticContext(DbContextOptions options) : base(options)
         {
+
         }
 
         public virtual DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.u
+            }
         }
 
     }
