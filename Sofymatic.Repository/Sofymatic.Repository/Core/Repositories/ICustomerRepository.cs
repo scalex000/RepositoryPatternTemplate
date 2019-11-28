@@ -7,6 +7,6 @@ namespace Sofymatic.Repository.Core.Repositories
 {
     public interface ICustomerRepository: IRepository<Customer>
     {
-
+        IEnumerable<Customer> GetGrandCustomers(int count);
     }
 }

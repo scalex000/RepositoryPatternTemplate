@@ -13,10 +13,17 @@ namespace Sofymatic.Repository.Persistence.Repositories
         public CustomerRepository(DbContext context) : base(context)
         {
         }
+        public IEnumerable<Customer> GetGrandCustomers(int count)
+        {
+            
+            throw new NotImplementedException();
+        }
+
 
         public SofymaticContext SofymaticContext
         {
             get { return Context as SofymaticContext; }
         }
-    }
+
+     }
 }
