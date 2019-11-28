@@ -10,6 +10,10 @@ namespace Sofymatic.Repository.Persistence
 {
     public class SofymaticContext : DbContext
     {
+        //public SofymaticContext(): base("name=SofymaticContext")
+        //{
+        //    this.Configuration.LazyLoadingEnabled = false;
+        //}
         public SofymaticContext(DbContextOptions options) : base(options)
         {
 
@@ -22,13 +26,5 @@ namespace Sofymatic.Repository.Persistence
 
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.u
-            }
-        }
-
     }
 }
