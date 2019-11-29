@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+## Repository Pattern
 
-You can use the [editor on GitHub](https://github.com/scalex000/RepositoryPatternTemplate/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+"Repositories are classes or components that encapsulate the logic required to access data sources. They centralize common data access functionality, providing better maintainability and decoupling the infrastructure or technology used to access databases from the domain model layer. If you use an Object-Relational Mapper (ORM) like Entity Framework, the code that must be implemented is simplified, thanks to LINQ and strong typing. This lets you focus on the data persistence logic rather than on data access plumbing."  Microsoft (https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+"A Repository mediates between the domain and data mapping layers, acting like an in-memory domain object collection. Client objects construct query specifications declaratively and submit them to Repository for satisfaction. Objects can be added to and removed from the Repository, as they can from a simple collection of objects, and the mapping code encapsulated by the Repository will carry out the appropriate operations behind the scenes." jgauffin.
 
-### Markdown
+### Purpose
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The purpose to use Repository pattern is to make abstraction, reduce complexity and make the rest of the code persistent ignorant.  Make your application more testability by doing unit tests instead integration tests.  Another is to reuse query.
 
-```markdown
-Syntax highlighted code block
+### Common mistakes
 
-# Header 1
-## Header 2
-### Header 3
+1. Expose IQuerable<T>
+2. Update/Save 
+3. Returning view models/DTOs
+4. Create one repository for all domain objects
+  
+  ### Language
+  C# 
+  
+  ### Framework
+  Entity Core 2.2.6
+  NetStandar Library 2.0.3
+  
+  
+  
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/scalex000/RepositoryPatternTemplate/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
