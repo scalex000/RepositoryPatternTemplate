@@ -15,5 +15,14 @@ The purpose to use Repository pattern is to make abstraction, reduce complexity 
 3. Returning view models/DTOs
 4. Create one repository for all domain objects
   
+  ### Language
+  C# 
+  
+  ### Framework
+  Entity Core 2.2.6
+  NetStandar Library 2.0.3
+  
+  
+  
 
 
