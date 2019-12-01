@@ -15,8 +15,9 @@ namespace Sofymatic.Repository.Persistence.EntityConfigurations
             builder.Property(c => c.CustomerId)
                 .IsRequired();
             builder.Property(c => c.Name)
-                .IsRequired()
-                .HasMaxLength(200);
+                .HasMaxLength(50);
+            builder.Property(c => c.LastName)
+                .HasMaxLength(50);
                 
         }
     }
