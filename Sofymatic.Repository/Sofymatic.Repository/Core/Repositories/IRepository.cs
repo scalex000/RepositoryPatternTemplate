@@ -1,5 +1,5 @@
 ﻿/*
- * Repository its a colletion of object so, you don't return IEnumerable,
+ * Repository its a colletion of object so, you don't return IQueryable,
  * DTO/Model, and do not perform updates.
  * 
  */
