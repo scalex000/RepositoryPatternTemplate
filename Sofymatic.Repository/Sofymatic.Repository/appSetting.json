@@ -1,0 +1,6 @@
+{
+  "status": "This Status read from appSettings.json file",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.\\sqlexpress;Database=Sofymatic;Trusted_Connection=True;MultipleActiveREsultSets=true"
+  }
+}
