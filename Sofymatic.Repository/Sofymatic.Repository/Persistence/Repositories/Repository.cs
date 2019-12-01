@@ -11,37 +11,37 @@ namespace Sofymatic.Repository.Persistence.Repositories
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext Context;
-        private DbSet<TEntity> _entities;
+        private readonly DbSet<TEntity> _entities;
 
         public Repository(DbContext context)
         {
-            Context = context;
-            _entities = context.Set<TEntity>();
+            this.Context = context;
+            this._entities = this.Context.Set<TEntity>();
         }
 
         public void Add(TEntity entity)
         {
-            _entities.Add(entity);
+            this._entities.Add(entity);
         }
 
         public void AddRange(TEntity entities)
         {
-            _entities.AddRange(entities);
+            this._entities.AddRange(entities);
         }
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            return _entities.Where(predicate);
+            return this._entities.Where(predicate);
         }
 
         public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
-            return _entities.SingleOrDefault(predicate);
+            return this._entities.SingleOrDefault(predicate);
         }
 
         public TEntity Get(int id)
         {
-            return _entities.Find(id);
+            return this._entities.Find(id);
         }
 
         public IEnumerable<TEntity> GetAll()
@@ -51,17 +51,17 @@ namespace Sofymatic.Repository.Persistence.Repositories
 
         public void Remove(TEntity entity)
         {
-            _entities.Remove(entity);
+            this._entities.Remove(entity);
         }
 
         public void RemoveRange(TEntity entities)
         {
-            _entities.RemoveRange(entities);
+            this._entities.RemoveRange(entities);
         }
 
         public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
-            return _entities.SingleOrDefault(predicate);
+            return this._entities.SingleOrDefault(predicate);
         }
     }
 }
